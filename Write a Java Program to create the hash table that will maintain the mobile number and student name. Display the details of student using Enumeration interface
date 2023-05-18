@@ -1,0 +1,43 @@
+// Java Program to Demonstrate Getting Keys
+// as an Enumeration of Hashtable class
+
+// Importing required classes
+import java.io.*;
+import java.util.*;
+
+// Main class
+class GFG {
+
+ // Main driver method
+ public static void main(String[] args)
+ {
+ // Creating an empty hashtable
+ Hashtable<String, String> ht
+ = new Hashtable<String, String>();
+
+ // Inserting key-value pairs into hash
+table
+ // using put() method
+ ht.put("Name", "Rohan");
+ ht.put("Mpbile_Nos", "8446049402");
+
+
+ // Now creating an Enumeration object
+ // to store keys
+ Enumeration<String> e = ht.keys();
+
+ // Condition holds true till there is
+ // single key remaining
+ while (e.hasMoreElements()) {
+
+ // Getting key
+ String key = e.nextElement();
+
+ // Printing key and value
+corresponding to
+ // that key
+ System.out.println(key + ":" +
+ht.get(key));
+ }
+ }
+} 
